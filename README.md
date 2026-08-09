@@ -1,6 +1,6 @@
 # India Daily Trend Briefing
 
-Auto-published daily by [Hermes cron](https://hermes-agent.nousresearch.com).
+Auto-published daily by [ARES cron](https://ares-agent.nousresearch.com).
 
 - Browse: <https://carltonkenny.github.io/Daily_briefings-/>
 - Source pipeline: `C:/Users/user/Projects/trend-briefings/scripts/publish_briefing.py`
