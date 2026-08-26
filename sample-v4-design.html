@@ -1,0 +1,200 @@
+<!doctype html>
+<!--
+v4 design sample for India Daily Briefing
+=======================================
+
+This is a SINGLE-SECTION sample (Top Stories) rendered in the proposed v4 design language.
+User reviews this, picks (a)/(b)/(c), then I ship the full re-skin.
+
+Three options shown side-by-side below as `<details>` accordions. Open whichever you want to compare.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>v4 design sample — India Daily Briefing</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --ink: #e2e8f0;
+    --mut: #94a3b8;
+    --acc: #4cc2ff;
+    --saffron: #FF9933;
+    --navy: #1a3a6c;
+    --paper: #fafaf7;
+    --paper-ink: #1a1a1a;
+    --serif: 'Playfair Display', 'Source Serif Pro', Georgia, serif;
+    --sans: -apple-system, 'Inter', system-ui, sans-serif;
+  }
+
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); }
+  main { max-width: 880px; margin: 0 auto; padding: 1.25rem; }
+  h1 { font-family: var(--serif); font-weight: 800; letter-spacing: -0.02em; }
+  details { border: 1px solid #26334d; border-radius: 12px; padding: 0.6rem 1rem; margin-bottom: 1rem; }
+  summary { cursor: pointer; font-weight: 700; }
+  .design { padding: 1rem 0; border-top: 1px dashed #26334d; margin-top: 1rem; }
+  .label { font-size: 0.78rem; color: var(--mut); text-transform: uppercase; letter-spacing: 0.1em; padding: 0.25rem 0.5rem; background: rgba(76,194,255,0.1); display: inline-block; border-radius: 4px; }
+
+  /* ===== Option A — current look, just cleaned up ===== */
+  .opt-a .card { background: var(--card); padding: 1rem; border-radius: 12px; border: 1px solid #26334d; }
+  .opt-a h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+  .opt-a .badge { display: inline-block; font-size: 0.68rem; padding: 0.05rem 0.42rem; border-radius: 999px; background: rgba(46,204,113,0.15); color: #2ecc71; margin-left: 0.35rem; }
+  .opt-a .why { color: var(--mut); font-size: 0.88rem; }
+  .opt-a .meta { font-size: 0.78rem; color: var(--mut); margin-top: 0.35rem; }
+
+  /* ===== Option B — India-press serif. Saffron + navy. ===== */
+  .opt-b { background: var(--paper); color: var(--paper-ink); padding: 1.5rem; border-radius: 4px; border-top: 4px solid var(--saffron); }
+  .opt-b .masthead { border-bottom: 2px solid #1a1a1a; padding-bottom: 0.5rem; margin-bottom: 1rem; font-family: var(--serif); }
+  .opt-b .masthead h2 { margin: 0; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .opt-b .masthead .date { font-size: 0.85rem; font-style: italic; color: #444; }
+  .opt-b .item { padding: 0.7rem 0; border-bottom: 1px dotted #cbd5e1; }
+  .opt-b .item:last-child { border-bottom: 0; }
+  .opt-b .lead { font-family: var(--serif); font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+  .opt-b .why-b { font-family: var(--serif); font-style: italic; color: #444; font-size: 0.92rem; margin: 0.35rem 0; }
+  .opt-b .byline { font-size: 0.78rem; color: #666; text-transform: uppercase; letter-spacing: 0.04em; }
+  .opt-b .nlabel { font-weight: 700; color: var(--navy); }
+
+  /* ===== Option C — Bento UI / Linear / Vercel style. Clean grid + icons. ===== */
+  .opt-c .grid { display: grid; grid-template-columns: 1fr; gap: 0.5rem; }
+  .opt-c .row { background: var(--card); border: 1px solid #26334d; border-radius: 10px; padding: 0.9rem 1rem; display: grid; grid-template-columns: 56px 1fr; gap: 0.75rem; align-items: center; }
+  .opt-c .rank { background: rgba(76,194,255,0.1); color: var(--acc); font-weight: 800; font-size: 0.9rem; padding: 0.35rem 0.5rem; border-radius: 8px; text-align: center; }
+  .opt-c .meta { font-size: 0.78rem; color: var(--mut); }
+  .opt-c .meta .src { color: var(--ink); font-weight: 600; }
+
+</style>
+</head>
+<body>
+<main>
+  <h1>v4 design sample</h1>
+  <p>Each option below renders the same Top Stories section from today's (2026-08-26) briefing. Open any to compare.</p>
+
+  <!-- ========== Option A: current look, polished ========== -->
+  <details open>
+    <summary><span class="label">Option A</span> Current design, polished</summary>
+    <div class="design opt-a">
+      <div class="card">
+        <h3>1. Union Minister Piyush Goyal pitches India as global data centre Hub - News On AIR <span class="badge">high</span></h3>
+        <span class="why">Centre courts hyperscaler capex with policy clarity.</span>
+        <div class="meta">🔗 News On AIR · 🕐 07:29 IST · 📍 National</div>
+      </div>
+      <div class="card" style="margin-top:0.5rem">
+        <h3>2. HM Amit Shah sets one-year deadline for 100% implementation of three new criminal laws - News On AIR <span class="badge">high</span></h3>
+        <span class="why">Sets 1-year deadline for full rollout of three new criminal statutes.</span>
+        <div class="meta">🔗 News On AIR · 🕐 ?? IST · 📍 National</div>
+      </div>
+      <div class="card" style="margin-top:0.5rem">
+        <h3>3. India, China agree to continue their work in seeking political settlement of border question <span class="badge">high</span></h3>
+        <span class="why">Diplomatic posture maintained; BRICS window opens.</span>
+        <div class="meta">🔗 The Hindu · 🕐 ?? IST · 📍 International</div>
+      </div>
+      <div class="card" style="margin-top:0.5rem">
+        <h3>4. 5 of family found dead in Srisailam; suicide suspected <span class="badge">medium</span></h3>
+        <span class="why">Family of 5 found dead in Srisailam; police investigating.</span>
+        <div class="meta">🔗 Hindustan Times · 🕐 ?? IST · 📍 National</div>
+      </div>
+      <div class="card" style="margin-top:0.5rem">
+        <h3>5. HT First Read Aug 26: Mamdani on RSS rally, Yash's return after 4 years <span class="badge">medium</span></h3>
+        <span class="why">Top editorial picks for the day.</span>
+        <div class="meta">🔗 Hindustan Times · 🕐 ?? IST · 📍 National</div>
+      </div>
+      <p style="margin-top:1rem"><em>What's different: just clean up the existing card; no structural change.</em></p>
+    </div>
+  </details>
+
+  <!-- ========== Option B: India-press serif ========== -->
+  <details>
+    <summary><span class="label">Option B</span> India-press serif (saffron + navy)</summary>
+    <div class="design opt-b">
+      <div class="masthead">
+        <h2>India Daily Briefing</h2>
+        <div class="date">Wednesday · 26 August 2026 · Asia/Kolkata</div>
+      </div>
+
+      <div class="item">
+        <div class="lead"><span class="nlabel">1.</span> Union Minister Piyush Goyal pitches India as global data centre Hub — News On AIR</div>
+        <div class="why-b">Centre courts hyperscaler capex with policy clarity.</div>
+        <div class="byline">News On AIR · 07:29 IST · National</div>
+      </div>
+      <div class="item">
+        <div class="lead"><span class="nlabel">2.</span> HM Amit Shah sets one-year deadline for 100% implementation of three new criminal laws</div>
+        <div class="why-b">Sets 1-year deadline for full rollout of three new criminal statutes.</div>
+        <div class="byline">News On AIR · National</div>
+      </div>
+      <div class="item">
+        <div class="lead"><span class="nlabel">3.</span> India, China agree to continue their work in seeking political settlement of border question</div>
+        <div class="why-b">Diplomatic posture maintained; BRICS window opens.</div>
+        <div class="byline">The Hindu · International</div>
+      </div>
+      <div class="item">
+        <div class="lead"><span class="nlabel">4.</span> 5 of family found dead in Srisailam; suicide suspected</div>
+        <div class="why-b">Family of 5 found dead in Srisailam; police investigating.</div>
+        <div class="byline">Hindustan Times · National</div>
+      </div>
+      <div class="item">
+        <div class="lead"><span class="nlabel">5.</span> HT First Read Aug 26: Mamdani on RSS rally, Yash's return after 4 years</div>
+        <div class="why-b">Top editorial picks for the day.</div>
+        <div class="byline">Hindustan Times · National</div>
+      </div>
+
+      <p style="margin-top:1rem"><em>What's different: looks like a printed front page. Work-friendly, shareable as screenshot, distinctive in a feed of dashboards.</em></p>
+    </div>
+  </details>
+
+  <!-- ========== Option C: Bento / Linear / Vercel ========== -->
+  <details>
+    <summary><span class="label">Option C</span> Bento / Linear / Vercel style</summary>
+    <div class="design opt-c">
+      <div class="grid">
+        <div class="row">
+          <div class="rank">1</div>
+          <div>
+            <div>Union Minister Piyush Goyal pitches India as global data centre Hub — News On AIR</div>
+            <div class="meta"><span class="src">News On AIR</span> · 07:29 IST · National</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="rank">2</div>
+          <div>
+            <div>HM Amit Shah sets one-year deadline for 100% implementation of three new criminal laws</div>
+            <div class="meta"><span class="src">News On AIR</span> · National</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="rank">3</div>
+          <div>
+            <div>India, China agree to continue their work in seeking political settlement of border question</div>
+            <div class="meta"><span class="src">The Hindu</span> · International</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="rank">4</div>
+          <div>
+            <div>5 of family found dead in Srisailam; suicide suspected</div>
+            <div class="meta"><span class="src">Hindustan Times</span> · National</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="rank">5</div>
+          <div>
+            <div>HT First Read Aug 26: Mamdani on RSS rally, Yash's return after 4 years</div>
+            <div class="meta"><span class="src">Hindustan Times</span> · National</div>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:1rem"><em>What's different: information-dense, modern dashboard feel, hover-friendly for mouse users, less human for screenshot shares.</em></p>
+    </div>
+  </details>
+
+  <hr style="border:none;border-top:1px solid #26334d;margin:2rem 0">
+
+  <h2>Tell me which one to ship</h2>
+  <p>Pick A / B / C and what to adjust.</p>
+  <ul style="line-height:1.8">
+    <li><strong>A</strong> — current look, polished. <em>Default if no answer.</em></li>
+    <li><strong>B</strong> — India-press serif (saffron + navy + Playfair Display).</li>
+    <li><strong>C</strong> — Bento / Linear / Vercel style.</li>
+    <li><strong>Custom</strong> — describe what you want instead.</li>
+  </ul>
+</main>
+</body>
+</html>
